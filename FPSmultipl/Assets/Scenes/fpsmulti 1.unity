@@ -846,7 +846,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1639695699}
         m_TargetAssemblyTypeName: launcher, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: Leaveroom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1938,74 +1938,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &722792404
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 722792406}
-  - component: {fileID: 722792405}
-  - component: {fileID: 722792407}
-  m_Layer: 0
-  m_Name: RoomManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &722792405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722792404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de5a076ed105cb7469d4519157eefaae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &722792406
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722792404}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &722792407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722792404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 0
-  ObservedComponents:
-  - {fileID: 0}
-  sceneViewId: 999
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!1 &731947599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3400,7 +3332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1353226664
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3936,7 +3868,7 @@ MonoBehaviour:
   roomListItemPrefab: {fileID: 6658128103071191314, guid: a5a2146d30325e84796ac6142d17011b, type: 3}
   playerListContent: {fileID: 1762353266}
   playerListItemPrefab: {fileID: 6422972622900251146, guid: 0cf79344309734645bb22564ef2de790, type: 3}
-  startGameButton: {fileID: 303684974}
+  startGameButton: {fileID: 0}
 --- !u!114 &1639695700
 MonoBehaviour:
   m_ObjectHideFlags: 0

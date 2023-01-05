@@ -30,6 +30,7 @@ public class launcher : MonoBehaviourPunCallbacks
     {
         Debug.Log("conneted to master");
         PhotonNetwork.JoinLobby();
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
     public override void OnJoinedLobby()
     {
@@ -64,6 +65,11 @@ public class launcher : MonoBehaviourPunCallbacks
         }
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
     }
+
+    public void StartGame()
+    {
+        PhotonNetwork.LoadLevel(1);
+    }
     public override void OnMasterClientSwitched(Player newMasterClient)
     {
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
@@ -97,6 +103,8 @@ public class launcher : MonoBehaviourPunCallbacks
         }
         for (int i = 0; i < roomList.Count; i++)
         {
+            if (roomList[i].RemovedFromList)
+                continue;
             Instantiate(roomListItemPrefab, roomListContent).GetComponent<RoomListItem>().SetUP(roomList[i]);
         }
     }
