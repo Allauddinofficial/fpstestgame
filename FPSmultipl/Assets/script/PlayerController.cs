@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
@@ -203,8 +204,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 		playerManager.Die();
 	}
 
-	public void ReMatch()
+	public void lobby()
 	{
-		launcher.instance.StartGame();
+		SceneManager.LoadScene("fpsmulti");
 	}
 }

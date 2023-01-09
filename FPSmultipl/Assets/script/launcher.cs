@@ -48,6 +48,7 @@ public class launcher : MonoBehaviourPunCallbacks
         }
         PhotonNetwork.CreateRoom(roomNameInputField.text);
         MenuManager.Instance.OpenMenu("loading");
+        PlayerPrefs.SetString("RoomName", roomNameInputField.text);
     }
 
     public override void OnJoinedRoom()
@@ -116,6 +117,5 @@ public class launcher : MonoBehaviourPunCallbacks
        
         Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItems>().SetUp(newPlayer);
     }
-
-
+   
 }

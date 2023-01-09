@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 6323232517209673933}
   - component: {fileID: 7542406382463349746}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Lobby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Rematch
+  m_text: Lobby
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 402163752104232010}
   - component: {fileID: 2512494034550082352}
   m_Layer: 0
-  m_Name: Rematch
+  m_Name: lobby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -873,7 +873,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7347487179691262137}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: ReMatch
+        m_MethodName: lobby
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
