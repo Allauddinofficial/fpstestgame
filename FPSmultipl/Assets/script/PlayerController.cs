@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 	[SerializeField] float mouseSensitivity, sprintSpeed, walkSpeed, jumpForce, smoothTime;
 
 	[SerializeField] Item[] items;
+	[SerializeField] GameObject rematch;
 
 	int itemIndex;
 	int previousItemIndex = -1;
@@ -200,5 +201,10 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 	void Die()
 	{
 		playerManager.Die();
+	}
+
+	public void ReMatch()
+	{
+		launcher.instance.StartGame();
 	}
 }

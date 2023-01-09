@@ -15,15 +15,17 @@ public class launcher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject roomListItemPrefab;  
     [SerializeField] Transform playerListContent;
     [SerializeField] GameObject playerListItemPrefab;
-    [SerializeField] GameObject startGameButton;
+    [SerializeField] GameObject startGameButton;  
     void Awake()
     {
         instance = this;    
+        
     }
     public void Start()
     {
         Debug.Log("conneting to master");
         PhotonNetwork.ConnectUsingSettings();
+       
     }
     public override void OnConnectedToMaster()
     {
@@ -62,7 +64,7 @@ public class launcher : MonoBehaviourPunCallbacks
         {
             Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItems>().SetUp(playerss[i]);
         }
-        startGameButton.SetActive(PhotonNetwork.IsMasterClient);
+        startGameButton.SetActive(PhotonNetwork.IsMasterClient); 
     }
 
     public void StartGame()
@@ -72,6 +74,7 @@ public class launcher : MonoBehaviourPunCallbacks
     public override void OnMasterClientSwitched(Player newMasterClient)
     {
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
+       
     }
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
@@ -113,4 +116,6 @@ public class launcher : MonoBehaviourPunCallbacks
        
         Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItems>().SetUp(newPlayer);
     }
+
+
 }
